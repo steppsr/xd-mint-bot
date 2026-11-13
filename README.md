@@ -1,5 +1,7 @@
 # xd-mint-bot
 
+![xd-mint-bot is open source. Turn Discord images into 1-of-1 Chia NFTs.](xd-mint-bot.png)
+
 Discord bot that mints a 1-of-1 Chia NFT from an image message.
 
 An authorized person reacts with 🌱. The bot asks for [CHIP-0007](https://github.com/Chia-Network/chips/blob/main/CHIPs/chip-0007.md) metadata, pins the image, metadata, and license to a Filebase IPFS bucket, then submits `nft_mint_nft` to a Chia wallet on the same machine. An optional sale price creates a Chia offer and posts it to [Dexie](https://dexie.space/).
