@@ -1,0 +1,23 @@
+# Example unit. "chia" and /home/chia/xd-mint-bot are placeholders.
+# Before installing, set User and Group to the Linux account that owns the
+# Chia wallet, and point WorkingDirectory, EnvironmentFile, and ExecStart
+# at that account's checkout. The account must be able to read the wallet
+# certificate and key. Do not run this service as root.
+[Unit]
+Description=xd-mint-bot Chia Discord minter
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=chia
+Group=chia
+WorkingDirectory=/home/chia/xd-mint-bot
+EnvironmentFile=/home/chia/xd-mint-bot/.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/chia/xd-mint-bot/venv/bin/python main.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

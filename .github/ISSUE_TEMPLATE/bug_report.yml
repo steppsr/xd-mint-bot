@@ -1,0 +1,31 @@
+name: Bug report
+description: Something in xd-mint-bot failed
+title: ""
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste `.env`, a bot token, a Filebase secret, a wallet certificate, or a mnemonic.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you expected, and the Discord message or --check line you saw.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Bot version and network
+      description: Example. 1.0.0, mainnet, DRY_RUN=true
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log excerpt
+      description: A few lines from logs/xd-mint-bot.log with secrets removed.
+    validations:
+      required: false

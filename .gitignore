@@ -1,0 +1,19 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+logs/
+*.log
+temp/*
+!temp/.gitkeep
+data/*
+!data/.gitkeep
+.idea/
+.vscode/
+
+# Machine-specific notes. Keep hostnames and private runbooks here.
+local/
